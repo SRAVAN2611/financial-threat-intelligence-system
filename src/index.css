@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #080c14;
+    color: #f8fafc;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* ========================================================
+   Dark Theme Card Styling
+   ======================================================== */
+.enterprise-card {
+  background: linear-gradient(145deg, #0f172a 0%, #111827 100%);
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  transition: all 0.2s ease-in-out;
+}
+
+.enterprise-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+}
+
+.enterprise-card-header {
+  border-bottom: 1px solid #1e293b;
+  padding: 1rem 1.25rem;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* ========================================================
+   100% LIGHT, BRIGHT & ATTRACTIVE THEME (ZERO DARK/GREY BOXES)
+   ======================================================== */
+body.light-theme,
+body.light-theme .main-layout-container,
+body.light-theme main,
+body.light-theme #root {
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 50%, #e0f2fe 100%) !important;
+  color: #0f172a !important;
+}
+
+/* 1. SIDEBAR NAVIGATION - Pure White & Soft Sky Blue Active Pill */
+body.light-theme aside {
+  background-color: #ffffff !important;
+  border-right: 1px solid #cbd5e1 !important;
+  box-shadow: 4px 0 16px rgba(2, 132, 199, 0.05) !important;
+}
+
+body.light-theme aside .text-slate-400,
+body.light-theme aside .text-slate-300 {
+  color: #334155 !important;
+}
+
+body.light-theme aside .text-slate-100,
+body.light-theme aside .text-slate-200 {
+  color: #0f172a !important;
+}
+
+/* Active Navigation Menu Link */
+body.light-theme aside .bg-sky-500\/10,
+body.light-theme aside .bg-slate-900,
+body.light-theme aside .bg-slate-950 {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%) !important;
+  border: 1px solid #38bdf8 !important;
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+/* 2. TOP NAVBAR - Pure White with Soft Sky Blue Bottom Accent */
+body.light-theme header {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #38bdf8 !important;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.06) !important;
+}
+
+body.light-theme header .bg-slate-900,
+body.light-theme header .bg-slate-950 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #0f172a !important;
+}
+
+/* 3. CARDS & CONTAINERS - Pure White with Sky Blue Accent Borders */
+body.light-theme .enterprise-card {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.08) !important;
+}
+
+body.light-theme .enterprise-card:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 12px 30px -4px rgba(2, 132, 199, 0.15) !important;
+}
+
+body.light-theme .enterprise-card-header {
+  border-bottom: 1px solid #e2e8f0 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%) !important;
+}
+
+/* 4. CONTROL FINDINGS, SUB-PANELS & INNER BOXES (OVERRIDE DARK GREY BOXES) */
+body.light-theme .bg-slate-950,
+body.light-theme .bg-slate-950\/90,
+body.light-theme .bg-slate-950\/80,
+body.light-theme .bg-slate-950\/60,
+body.light-theme .bg-slate-950\/40,
+body.light-theme .bg-slate-900,
+body.light-theme .bg-slate-900\/90,
+body.light-theme .bg-slate-900\/80,
+body.light-theme .bg-slate-900\/60,
+body.light-theme .bg-slate-850,
+body.light-theme .bg-slate-800,
+body.light-theme .bg-slate-800\/80,
+body.light-theme .bg-slate-800\/60 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+}
+
+/* 5. TABLES & DATA GRIDS - Soft Light Blue Headers & Clean White Rows */
+body.light-theme table {
+  background-color: #ffffff !important;
+}
+
+body.light-theme thead,
+body.light-theme th {
+  background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 100%) !important;
+  color: #0369a1 !important;
+  border-color: #7dd3fc !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme tbody tr {
+  background-color: #ffffff !important;
+  border-color: #f1f5f9 !important;
+}
+
+body.light-theme tbody tr:hover {
+  background-color: #f0f9ff !important;
+}
+
+body.light-theme td {
+  color: #0f172a !important;
+}
+
+/* 6. INPUTS & SEARCH BARS */
+body.light-theme input,
+body.light-theme select,
+body.light-theme textarea {
+  background-color: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+}
+
+body.light-theme input:focus,
+body.light-theme select:focus,
+body.light-theme textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* 7. PASTEL SOFT SEVERITY CHIPS */
+body.light-theme .bg-rose-500\/10,
+body.light-theme .bg-rose-500\/20 {
+  background-color: #ffe4e6 !important;
+  color: #be123c !important;
+  border: 1px solid #f43f5e !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme .bg-emerald-500\/10,
+body.light-theme .bg-emerald-500\/20 {
+  background-color: #d1fae5 !important;
+  color: #047857 !important;
+  border: 1px solid #10b981 !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme .bg-sky-500\/10,
+body.light-theme .bg-sky-500\/20 {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  border: 1px solid #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme .bg-amber-500\/10,
+body.light-theme .bg-amber-500\/20 {
+  background-color: #fef3c7 !important;
+  color: #b45309 !important;
+  border: 1px solid #f59e0b !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme .bg-orange-500\/10,
+body.light-theme .bg-orange-500\/20 {
+  background-color: #ffedd5 !important;
+  color: #c2410c !important;
+  border: 1px solid #f97316 !important;
+  font-weight: 700 !important;
+}
+
+/* 8. TYPOGRAPHY & HEADING HIERARCHY OVERRIDES (BRIGHT HIGH CONTRAST) */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme .text-slate-100,
+body.light-theme .text-slate-200 {
+  color: #0f172a !important;
+}
+
+body.light-theme p,
+body.light-theme span,
+body.light-theme label,
+body.light-theme div,
+body.light-theme .text-slate-300,
+body.light-theme .text-slate-400 {
+  color: #334155 !important;
+}
+
+body.light-theme .text-slate-500,
+body.light-theme .text-slate-600 {
+  color: #475569 !important;
+}
+
+body.light-theme .text-sky-400 {
+  color: #0284c7 !important;
+}
+
+body.light-theme .text-emerald-400 {
+  color: #059669 !important;
+}
+
+body.light-theme .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+body.light-theme .text-amber-400 {
+  color: #d97706 !important;
+}
+
+body.light-theme .text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+/* 9. SCROLLBARS */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+body.light-theme ::-webkit-scrollbar-track {
+  background: #f0f9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Pulse animation for live anomaly scanner */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
